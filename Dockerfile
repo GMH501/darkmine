@@ -5,6 +5,7 @@ RUN apt-get update && \
     apt-get install -y unzip gcc make libpq-dev && \ 
     rm -rf /var/lib/apt/lists/*
 USER 1001
-RUN cp circle_theme-2_1_5.zip usr/src/redmine/public/themes && \ 
+RUN cp /darkmine/circle_theme-2_1_5.zip usr/src/redmine/public/themes && \ 
     cd /usr/src/redmine/public/themes && \ 
-    unzip circle_theme-2_1_5.zip
+    unzip circle_theme-2_1_5.zip && \
+    rm -rf circle_theme-2_1_5.zip
