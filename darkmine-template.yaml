@@ -124,7 +124,7 @@ objects:
       spec:
         restartPolicy: Always
         containers:
-        - image: redmine
+        - image: gmh501/darkmine
           imagePullPolicy: Always
           name: darkmine
           env:
@@ -140,7 +140,7 @@ objects:
           - containerPort: 3000
             protocol: TCP
           volumeMounts:
-          - mountPath: /usr/src/redmine/public/themes
+          - mountPath: /usr/src/redmine/plugins
             name: darkmineplugin-volume
         serviceAccountName: darkmine
         volumes:
