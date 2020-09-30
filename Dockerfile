@@ -7,4 +7,7 @@ RUN apt-get update && \
     cp /darkmine/circle_theme-2_1_5.zip /usr/src/redmine/public/themes && \  
     cd /usr/src/redmine/public/themes && \ 
     unzip circle_theme-2_1_5.zip && \
-    rm -rf circle_theme-2_1_5.zip 
+    rm -rf circle_theme-2_1_5.zip && \
+    cd /usr/src/redmine/plugins/ && \
+    git clone git@github.com:phanan/redmine_webhook.git
+USER 1001
