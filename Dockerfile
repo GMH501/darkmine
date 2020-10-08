@@ -8,4 +8,3 @@ RUN apt-get update && \
     cd /usr/src/redmine/public/themes && \ 
     unzip circle_theme-2_1_5.zip && \
     rm -rf circle_theme-2_1_5.zip
-USER 1001
